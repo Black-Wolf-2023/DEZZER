@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEZZEL</title>
+    <!-- ======================== Title - Meta -->
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="shortcut icon" href="./assets/music.png" type="image/x-icon">
+    <!-- ======================== Links -->
+  </head>
+
+  <body test ="dark">
+    <audio src="./assets/Audios/gustavo.mp3" id="main-audio"></audio>
+      <!-- ======================== AUDIO -->
+    <section id="app">
+      <!-- ======================== Aside -->
+      <aside  show = 'false'>
+        <div class="lay-out">
+          <div class="user-details">
+            <div class="img aside-animate">
+              <div class="fixed-text"><img src="./assets/musics-imgs/animter.gif" alt=""></div>
+              <img src="./assets/musics-imgs/milk-and-mocha-cute.gif" alt="">
+            </div>
+          </div>
+          <ul>
+            <li class="active-link">
+              <ion-icon name="home-outline"></ion-icon><a href="">Home</a>
+            </li>
+            <li>
+              <ion-icon name="alarm-outline"></ion-icon><a href="">Recently</a>
+            </li>
+            <li>
+              <ion-icon name="heart-outline"></ion-icon><a href="">Favourites</a>
+            </li>
+            <li>
+              <ion-icon name="notifications-outline"></ion-icon><a href="">Notification</a>
+            </li>
+            <li>
+              <ion-icon name="settings-outline"></ion-icon><a href="">Settings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo"><img src="./assets/Logo.svg" alt=""></div>
+      </aside>
+      <!-- ======================== Aside -->
+
+      <!-- ======================== content -->
+      <section id="content">
+        <!-- ======================== Header -->
+        <header>
+          <div class="search">
+            <ion-icon name="search-outline"></ion-icon>
+            <input placeholder="Search for song ..." type="text">
+          </div>
+          <ion-icon name="list-outline" class="hide toggler"></ion-icon>
+        </header>
+        <!-- ======================== Header -->
+<!-- ======================== Row-Component -->
+        <div class="row-component">
+          <div class="head">
+            <h3>Billboard Topchart</h3>
+            <div class="controlls">
+              <ion-icon name="arrow-back-outline" class="scroll-right"></ion-icon>
+              <ion-icon name="arrow-forward-outline" class="scroll-left"></ion-icon>
+            </div>
+          </div>
+
+          <div class="music-list">
+            <div class="container">
+               <!-- IT will Come From Ts Line (69) -->
+            </div>
+          </div>
+        </div>
+        <!-- ======================== Row-Component -->
+        <div class="column-component">
+          <div class="player">
+            <div class="music-layer">
+              <div class="img" rotate-animate ="false"><img src="./assets/musics-imgs/1.png" alt=""></div>
+              <h3>Gustavo</h2>
+              <h5>DIAGO MARKOS</h5>
+              <div class="range"><span class="range-layer"><span class="circle"></span></span></div>
+              <div class="timer">
+                <span class="total-time">3:00</span>
+                <span class="current-time">00:00</span>
+              </div>
+            </div>
+            <div class="controlls">
+              <button class="back"><ion-icon name="play-back-outline"></ion-icon></button>
+              <button data-status='play' id="player-controll">
+                <ion-icon name="musical-notes-outline"></ion-icon>
+                <ion-icon name="pause-outline"></ion-icon>
+              </button>
+              <button class="next"><ion-icon name="play-forward-outline"></ion-icon></button>
+            </div>
+          </div>
+          <div class="list">
+            <div class="head">
+              <h3>Moust Popular</h3>
+              <h5 class="song-num">
+                <!-- iT Will Come From Ts Line (96) -->
+              </h5>
+            </div>
+            <div class="music-app">
+              <!-- It Will Come From Ts Line (94) -->
+            </div>
+            <div class="mode" mode="light">
+              <img src="./assets/Icons/moon.png" alt="" >
+              <img src="./assets/Icons/sun.png" alt="" class="active_mode">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======================== content -->
+
+    </section>
+    <!-- ======================== Script -->
+    <script type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="./public/js/main.js"></script>
+  </body>
+
+</html>

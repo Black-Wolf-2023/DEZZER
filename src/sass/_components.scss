@@ -1,0 +1,99 @@
+$main-color: #112048;
+$primary-color: linear-gradient(to right, #1d3258, #33496e);
+$red-color: #e93452;
+$btn-color: lineargradient(80deg, #e93452, #ffff);
+$content-color: #f9fafe;
+$gray-color: rgba(191, 202, 226, 0.548);
+$gray-color-2: rgba(41, 48, 66, 0.712);
+$white-color: #fff;
+$shadow-color:rgba(191, 202, 226, 0.678);
+
+@mixin flex($d, $j, $a) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-direction: $d;
+}
+
+@mixin media($size) {
+  @if $size==lg {
+    @media screen and (min-width: 1067px) {
+      @content;
+    }
+  }
+
+  @else if $size==md {
+    @media screen and (min-width: 676px) and (max-width: 1066px) {
+      @content;
+    }
+  }
+
+  @else if $size==sm {
+    @media screen and (min-width: 377px) and (max-width: 675px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: 200px) and (max-width: 376px) {
+      @content;
+    }
+  }
+}
+
+#app {
+  display: grid;
+  background-color: var(--content-color, $content-color);
+  justify-items: flex-end;
+
+  #content {
+    width: 80%;
+
+    @include media(em) {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    @include media(sm) {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    @include media(md) {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  @include media(em) {
+    grid-template-columns: 1fr;
+  }
+
+  @include media(sm) {
+    grid-template-columns: 1fr;
+  }
+
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hide {
+  display: none;
+
+  @include media(em) {
+    display: block;
+  }
+
+  @include media(sm) {
+    display: block;
+  }
+
+  @include media(md) {
+    display: block;
+  }
+}
+
+button {
+  cursor: pointer;
+}

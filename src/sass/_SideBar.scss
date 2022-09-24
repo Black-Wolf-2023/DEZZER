@@ -1,0 +1,153 @@
+@use "./components"as *;
+
+#app {
+  aside {
+    z-index: 10000;
+    background-color: var(--white-color, $white-color);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    @include flex(column, space-between, flex-start);
+
+    @include media(em) {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+    }
+
+    @include media(sm) {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+    }
+
+    @include media(md) {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+    }
+
+    .lay-out {
+      width: 100%;
+      padding: 20px;
+      background-color: var(--white-color, $white-color);
+      box-shadow: inset 1px 1px 10px var(--gray-color, $gray-color),
+        inset -1px -1px 10px var(--gray-color, $gray-color);
+
+      .user-details {
+        @include flex(column, center, center);
+        margin-bottom: 100px;
+        gap: 10px;
+        color: var(--gray-color, $gray-color);
+
+        @include media(em) {
+          margin-bottom: 30px;
+        }
+
+        .img {
+          text-align: center;
+          background-color: transparent;
+          text-align: center;
+
+          img {
+            display: none;
+          }
+
+          .fixed-text {
+            width: 200px;
+
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+
+        .user-name {
+          font-weight: bold;
+          color: var(--main-color, $main-color);
+        }
+      }
+
+      ul {
+        @include flex(column, flex-start, flex-start);
+        gap: 30px;
+
+        li {
+          @include flex(row, center, center);
+          width: 100%;
+          padding: 5px 20px;
+          border-radius: 10px;
+          gap: 20px;
+
+          ion-icon {
+            font-size: 25px;
+            color: var(--gray-color-2, $gray-color-2);
+          }
+
+          a {
+            width: 100%;
+            border-radius: 5px;
+            font-size: 13.5px;
+            font-weight: bolder;
+            color: var(--main-color, $main-color);
+            position: relative;
+            padding: 10px;
+          }
+        }
+
+        .active-link {
+          background-image: var(--primary-color, $primary-color);
+          color: var(--white-color, $white-color);
+
+          a {
+            color: var(--white-color, $white-color);
+          }
+
+          ion-icon {
+            color: var(--white-color, $white-color);
+          }
+        }
+      }
+    }
+
+    .logo {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+      background-image: var(--primary-color, $primary-color);
+    }
+  }
+
+  aside[show="true"] {
+    @include media(em) {
+      left: 0%;
+    }
+
+    @include media(sm) {
+      left: 0%;
+    }
+
+    @include media(md) {
+      left: 0%;
+    }
+  }
+
+  aside[show="false"] {
+    @include media(em) {
+      left: -100%;
+    }
+
+    @include media(sm) {
+      left: -100%;
+    }
+
+    @include media(md) {
+      left: -100%;
+    }
+  }
+}
